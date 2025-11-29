@@ -156,7 +156,6 @@ export function ChatbotPage({ onNavigate, onLogout }: ChatbotPageProps) {
               </Button>
             </div>
 
-            {/* Dialog para adicionar nova configuração */}
             {showAddDialog && (
               <Card className="w-full border-2 border-primary">
                 <CardHeader>
@@ -283,7 +282,7 @@ export function ChatbotPage({ onNavigate, onLogout }: ChatbotPageProps) {
                     >
                       <div className="flex-1 space-y-3 min-w-0">
                         {editingId === automation.id ? (
-                          // Modo de edição
+                          
                           <>
                             <div className="space-y-3">
                               <div className="space-y-2">
@@ -342,7 +341,7 @@ export function ChatbotPage({ onNavigate, onLogout }: ChatbotPageProps) {
                             </div>
                           </>
                         ) : (
-                          // Modo de visualização
+                          
                           <>
                             <div className="flex items-start justify-between gap-4">
                               <div className="flex-1 min-w-0">

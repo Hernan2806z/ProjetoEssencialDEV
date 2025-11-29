@@ -44,13 +44,11 @@ const AppointmentModal = ({ isOpen, onClose, onSave, initialData }: any) => {
     onSave(formData);
   };
 
-  // Label styles
   const labelClass = "text-sm font-medium text-white dark:text-blue-100 mb-1.5 block";
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 dark:bg-black/80 backdrop-blur-sm p-4">
       
-      {/* CSS CUSTOMIZADO PARA OS DEGRADÊS */}
       <style>{`
         .custom-modal-container {
           background: linear-gradient(180deg, #00d5be 0%, #6393ff 100%) !important;
@@ -200,7 +198,6 @@ const AppointmentModal = ({ isOpen, onClose, onSave, initialData }: any) => {
 
 export function ConsultationsPage({ onNavigate, onLogout }: any) {
   const [consultations, setConsultations] = useState<Consultation[]>([]);
-  // ALTERAÇÃO AQUI: Mudado de 'all' para 'Agendada' para exibir apenas as agendadas por padrão
   const [activeFilter, setActiveFilter] = useState<string>('Agendada');
   const [isLoading, setIsLoading] = useState(true);
   

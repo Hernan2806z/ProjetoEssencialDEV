@@ -36,21 +36,13 @@ export function LoginPage({ onLogin }: LoginPageProps) {
         email, 
         password 
       });
-
-      // CORREÇÃO AQUI: O token está dentro do objeto 'user'
       const token = response.data.user?.accessToken;
 
       if (token) {
-        // 1. Salva o token no localStorage
         localStorage.setItem("auth_token", token);
-        
-        // 2. Opcional: Salvar dados do usuário também
         localStorage.setItem("user_data", JSON.stringify(response.data.user));
-
-        // 3. Atualiza o header do axios imediatamente para não precisar de F5
         api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         
-        // 4. Avisa o app que logou
         onLogin();
       } else {
         setError("Erro: Login realizado, mas token não encontrado na resposta.");
@@ -68,7 +60,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
 
   return (
     <div className="w-screen h-screen flex">
-      {/* Lado Esquerdo - Gradiente */}
+
       <div className="w-1/2 flex flex-col items-center justify-center px-16 relative"
            style={{
             background: isDarkMode
@@ -91,7 +83,6 @@ export function LoginPage({ onLogin }: LoginPageProps) {
         </div>
       </div>
 
-      {/* Lado Direito - Formulário */}
       <div className="w-1/2 bg-background dark:bg-[#1a1a1a] flex flex-col items-center justify-center px-16 relative">
         <div className="w-full max-w-md">
           <div className="mb-12">

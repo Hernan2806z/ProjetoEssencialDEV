@@ -41,7 +41,6 @@ export function UsersPage() {
     }
   };
 
-  // Formata a data para o padrão brasileiro
   const formatDate = (dateString: string) => {
     if (!dateString) return "—";
     try {
@@ -73,7 +72,7 @@ export function UsersPage() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  {/* CABEÇALHOS: Todos alinhados à ESQUERDA (text-left) */}
+
                   <TableHead className="text-left w-[200px]">Nome</TableHead>
                   <TableHead className="text-left">Email</TableHead>
                   <TableHead className="text-left">Perfil</TableHead>
@@ -85,29 +84,23 @@ export function UsersPage() {
                 {loading ? <TableRow><TableCell colSpan={5} className="text-center p-8">Carregando...</TableCell></TableRow> :
                  filteredUsers.map((user) => (
                   <TableRow key={user.id}>
-                    {/* DADOS: Todos alinhados à ESQUERDA (text-left) */}
-                    
-                    {/* Nome */}
+
                     <TableCell className="text-left font-medium">
                         {user.name}
                     </TableCell>
 
-                    {/* Email */}
                     <TableCell className="text-left text-muted-foreground">
                         {user.email}
                     </TableCell>
-                    
-                    {/* Perfil */}
+
                     <TableCell className="text-left">
                         <Badge variant="secondary">{user.profile || 'User'}</Badge>
                     </TableCell>
 
-                    {/* Data */}
                     <TableCell className="text-left">
                         {formatDate(user.createdAt)}
                     </TableCell>
-                    
-                    {/* Ações */}
+
                     <TableCell className="text-left">
                       <Button variant="ghost" size="icon" onClick={() => handleDelete(user.id)}>
                         <Trash2 className="w-4 h-4 text-red-500" />
