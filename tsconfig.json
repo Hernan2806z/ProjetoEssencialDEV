@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // ---- CONFIGURAÇÕES ADICIONADAS PARA RESOLVER ERROS DE MÓDULO JS ----
+    "allowJs": true,   // Permite a importação e inferência de tipos em arquivos .js
+    "checkJs": false   // Opcional, mas evita que o TS verifique a sintaxe interna do .js
+  },
+  // Mantemos a inclusão do seu diretório de tipos
+  "include": ["src", "src/types"],
+  "exclude": ["node_modules", "dist", "build"]
+}

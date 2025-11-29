@@ -1,0 +1,308 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* EssencialDev Light Theme */
+  /* Primary: #00D5BE (turquoise - botões, nav ativa, chips) */
+  /* Accent: #A3B3FF (blue-purple - links, estados informativos, foco) */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: #fafafa;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #00D5BE;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --accent: #A3B3FF;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f5f5f5;
+  --switch-background: #d4d4d4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #A3B3FF;
+  
+  /* Gradient colors for hero/footer */
+  --gradient-from: #00D5BE;
+  --gradient-to: #A3B3FF;
+  
+  /* Charts usando gradiente */
+  --chart-1: #00D5BE;
+  --chart-2: #A3B3FF;
+  --chart-3: #7dd3c0;
+  --chart-4: #c4cdff;
+  --chart-5: #50c9b4;
+  
+  --radius: 0.5rem;
+  
+  /* Sidebar */
+  --sidebar: #fafafa;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #00D5BE;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: rgba(0, 0, 0, 0.08);
+  --sidebar-ring: #A3B3FF;
+  
+  /* Status colors */
+  --success: #22c55e;
+  --success-foreground: #ffffff;
+  --warning: #f59e0b;
+  --warning-foreground: #ffffff;
+  --info: #A3B3FF;
+  --info-foreground: #ffffff;
+  --status-realizada: #22c55e;
+  --status-no-show: #f59e0b;
+  --status-cancelada: #737373;
+  --status-em-espera: #3b82f6;
+}
+
+.dark {
+  /* EssencialDev Dark Theme */
+  /* Background: #2d2d2d (cinza escuro) */
+  /* Primary: #051782 (azul profundo - botões, nav ativa) */
+  /* Accent: deriva do light (#A3B3FF) para links/foco */
+  /* Gradient: #01051C → #051782 (azul escuro para admin) */
+  --background: #2d2d2d;
+  --foreground: #f5f5f5;
+  --card: #3a3a3a;
+  --card-foreground: #f5f5f5;
+  --popover: #3a3a3a;
+  --popover-foreground: #f5f5f5;
+  --primary: #051782;
+  --primary-foreground: #ffffff;
+  --secondary: #404040;
+  --secondary-foreground: #f5f5f5;
+  --muted: #404040;
+  --muted-foreground: #a3a3a3;
+  --accent: #A3B3FF;
+  --accent-foreground: #01051C;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: transparent;
+  --input-background: #404040;
+  --switch-background: #404040;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #A3B3FF;
+  
+  /* Gradient colors - Admin dark: #01051C → #051782 */
+  --gradient-from: #01051C;
+  --gradient-to: #051782;
+  
+  /* Charts para dark theme */
+  --chart-1: #051782;
+  --chart-2: #A3B3FF;
+  --chart-3: #0a2299;
+  --chart-4: #8090e5;
+  --chart-5: #0831a8;
+  
+  /* Sidebar dark */
+  --sidebar: #3a3a3a;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #051782;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #404040;
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #A3B3FF;
+  
+  /* Status colors dark */
+  --success: #16a34a;
+  --success-foreground: #ffffff;
+  --warning: #d97706;
+  --warning-foreground: #ffffff;
+  --info: #A3B3FF;
+  --info-foreground: #01051C;
+  --status-realizada: #16a34a;
+  --status-no-show: #d97706;
+  --status-cancelada: #737373;
+  --status-em-espera: #3b82f6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-status-realizada: var(--status-realizada);
+  --color-status-no-show: var(--status-no-show);
+  --color-status-cancelada: var(--status-cancelada);
+  --color-status-em-espera: var(--status-em-espera);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Utility classes */
+@layer utilities {
+  /* Gradient backgrounds */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, var(--gradient-from) 0%, var(--gradient-to) 100%);
+  }
+  
+  .bg-gradient-primary-soft {
+    background: linear-gradient(135deg, var(--gradient-from) 0%, var(--gradient-to) 100%);
+    opacity: 0.1;
+  }
+  
+  /* Focus ring com accent color */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+  
+  /* Hover overlay para navegação */
+  .nav-hover {
+    @apply hover:bg-accent/10 transition-colors;
+  }
+  
+  /* Container responsivo com breakpoints */
+  .container-responsive {
+    @apply mx-auto px-6;
+    max-width: 1440px;
+  }
+  
+  @media (max-width: 1280px) {
+    .container-responsive {
+      max-width: 1280px;
+    }
+  }
+  
+  /* Grid responsivo para KPIs e cards */
+  .grid-kpi {
+    @apply grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+  }
+  
+  @media (max-width: 1280px) {
+    .grid-kpi {
+      @apply grid-cols-1 md:grid-cols-2;
+    }
+  }
+  
+  /* Grid responsivo para blog */
+  .grid-blog {
+    @apply grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+  }
+  
+  @media (max-width: 1280px) {
+    .grid-blog {
+      @apply grid-cols-1 md:grid-cols-2;
+    }
+  }
+}
